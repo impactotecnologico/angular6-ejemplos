@@ -1,0 +1,16 @@
+
+
+<table border=1>
+  <th *ngFor="let item of headers" > {{item}} </th>
+  <th>Acciones</th>
+  <tr [ngClass]="getCSSClasses(pos)"  *ngFor="let us of usuarios; let pos = index">
+    <td>{{us.id}}</td>
+    <td>{{us.nombre}}</td>
+    <td>{{us.fecha}}</td>
+    <td colorer>{{getCSSClasses(5)}}</td>
+    <td>
+      <input type="button" (click)="validaciones(us)">
+
+    </td>
+  </tr>
+</table>
